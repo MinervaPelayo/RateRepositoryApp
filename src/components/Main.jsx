@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { Route, Switch } from 'react-router-native';
 import RepositoryList from './RepositoryList';
 import SignIn from './SignIn';
+import SignOut from './SignOut';
 import AppBar from './AppBar';
 import theme from '../theme';
 
@@ -20,6 +21,7 @@ const Main = () => {
       <Switch>
         <Route exact path="/" component={RepositoryList} />
         <Route path="/signin" component={SignIn} />
+        <Route path="/signout" component={SignOut} />
       </Switch>
     </View>
   );
