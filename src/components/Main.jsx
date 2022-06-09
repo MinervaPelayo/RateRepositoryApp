@@ -2,10 +2,12 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Route, Switch } from 'react-router-native';
 import RepositoryList from './RepositoryList';
+import SingleRepository from './SingleRepository';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import AppBar from './AppBar';
 import theme from '../theme';
+import Review from './Review';
 
 const styles = StyleSheet.create({
   main: {
@@ -22,6 +24,8 @@ const Main = () => {
         <Route exact path="/" component={RepositoryList} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signout" component={SignOut} />
+        <Route path="/review" component={Review} />
+        <Route path="/:id" component={SingleRepository} />
       </Switch>
     </View>
   );

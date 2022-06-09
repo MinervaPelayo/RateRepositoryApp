@@ -7,8 +7,11 @@ const styles = StyleSheet.create({
   appBarTitle: {
     color: 'white',
     fontWeight: theme.fontWeights.bold,
-    fontSize: 22,
-    padding: 20,
+    fontSize: 19,
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingRight:12,
+    paddingLeft:12   
   }
 });
 

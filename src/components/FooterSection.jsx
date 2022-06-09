@@ -16,7 +16,7 @@ const FooterSection = ({ label, count, ...props }) => {
   }
 
   return (
-    <View style={cardFooterStyles.section} {...props}>
+    <View testID="repositoryFooter" style={cardFooterStyles.section} {...props}>
       <Text fontWeight="bold">{newCount}</Text>
       <Text color="textSecondary">{label}</Text>
     </View>

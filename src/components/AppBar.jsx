@@ -13,12 +13,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     maxHeight: 100
-  },
-  appBarTitle: {
-    color: 'white',
-    fontWeight: theme.fontWeights.bold,
-    fontSize: 22,
-    padding: 20,
   }
 });
 
@@ -30,11 +24,14 @@ const AppBar = () => {
   return (
     <ScrollView horizontal style={styles.scrollView}>
       {data && data.authorizedUser !== null &&
-        <AppBarTab title="Repositories" path={"/"} />
+        <>
+          <AppBarTab title="Repositories" path={"/"} />
+          {/* <AppBarTab title="Create a review" path={"/review"} /> */}
+        </>
       }
       {data && data.authorizedUser === null ? 
-        <AppBarTab title="Sign In" path={"/signin"} /> : 
-        <AppBarTab title="Sign Out" path={"/signout"} />
+        <AppBarTab title="Sign Out" path={"/signout"} /> :
+        <AppBarTab title="Sign In" path={"/signin"} />
       }
     </ScrollView>
   );

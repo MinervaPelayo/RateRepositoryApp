@@ -35,10 +35,10 @@ const ItemHeader = ({ item }) => {
         <Image style={styles.avatar} source={{ uri: item.ownerAvatarUrl }} />
       </View>
       <View style={styles.infoContainer}>
-        <Text fontWeight="bold" fontSize="subheading">{item.fullName}</Text>
-        <Text color="textSecondary">{item.description}</Text>
+        <Text testID="repositoryFullName" fontWeight="bold" fontSize="subheading">{item.fullName}</Text>
+        <Text testID="repositoryDescription" color="textSecondary">{item.description}</Text>
         <View>
-          <Text style={styles.languageText}>{item.language}</Text>
+          <Text testID="repositoryLanguage" style={styles.languageText}>{item.language}</Text>
         </View>
       </View>
     </View>
